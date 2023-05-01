@@ -1,6 +1,4 @@
-import React, {
-  useState, useEffect, ReactNode, ReactElement,
-} from 'react';
+import React, { ReactNode } from 'react';
 import { useSpring, animated } from '@react-spring/web';
 import { useInView } from 'react-intersection-observer';
 
