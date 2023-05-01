@@ -26,7 +26,7 @@ const Portfolio: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
   }, [isVisible]);
 
   return (
-    <section ref={componentRef} id="portfolio" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="portfolio" className={styles.container}>
       <TextAnimation className={styles.title_container} type="fade_right" delay={0}>
         <Title index='02' title='Portfolio' subtitle="Overview of my" variant={variant} />
       </TextAnimation>

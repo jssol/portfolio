@@ -52,7 +52,7 @@ const Contact: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
   };
 
   return (
-    <section ref={componentRef} id="contact" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="contact" className={styles.container}>
       <TextAnimation type="fade_right" delay={0} className={styles.title_container}>
         <Title index='04' title='Get started' subtitle="Interested in collaborating?" variant={variant} className={styles.title} />
       </TextAnimation>

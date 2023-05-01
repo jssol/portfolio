@@ -23,7 +23,7 @@ const Hero: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
   }, [isVisible]);
 
   return (
-    <section ref={componentRef} id="hello" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="hello" className={styles.container}>
       <TextAnimation type="fade_right" delay={0}>
         <Title index='01' title='Jonathan Sivahera' subtitle="Hello, I'm" variant={variant} />
       </TextAnimation>

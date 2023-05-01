@@ -123,6 +123,7 @@ p {
   width: 100%;
   color: $primary;
   z-index: 10;
+  background-image: url('../assets/background.svg');
 
   &.nav_open {
     height: 100vh;
@@ -221,6 +222,14 @@ p {
   width: 5rem;
   height: 5rem;
   z-index: -10;
+}
+
+.hidden {
+  opacity: 0;
+}
+
+.with-background {
+  background-color: $primary-bg;
 }
 
 .nav_open .mobile {

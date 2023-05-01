@@ -24,7 +24,7 @@ const About: React.FC<Props> = ({ componentRef, isVisible }) => {
   }, [isVisible]);
 
   return (
-    <section ref={componentRef} id="services" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="services" className={styles.container}>
       <section className={styles.about}>
         <TextAnimation className={styles.title_container} type="fade_right" delay={0}>
           <Title index='03' title='About me' subtitle="Know more" variant='one' className={styles.title} />
