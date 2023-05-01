@@ -158,14 +158,14 @@ p {
     height: 0.125rem;
     display: block;
     background-color: $primary;
+    transform: rotate(0deg);
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
-    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
     -webkit-transition: 0.25s ease-in-out;
     -moz-transition: 0.25s ease-in-out;
     -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
   }
 
   &::after,
@@ -185,10 +185,10 @@ p {
   }
 
   .nav_open & {
+    transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    transform: rotate(45deg);
   }
 
   .nav_open &::before {
@@ -198,10 +198,10 @@ p {
 
   .nav_open &::after {
     top: 0;
+    transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
-    transform: rotate(90deg);
   }
 
   .nav_open &,
