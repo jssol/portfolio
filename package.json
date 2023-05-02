@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "npm run partytown && next build",
     "start": "next start",
-    "lint": "next lint && npx eslint . --fix && npx stylelint '**/*.{css,scss}' --fix",
+    "lint": "npx eslint . --fix && npx stylelint '**/*.{css,scss}' --fix && next lint",
     "partytown": "partytown copylib public/~partytown"
   },
   "dependencies": {
