@@ -1,3 +1,5 @@
+import React, { useEffect, useState } from 'react';
+import { useRouter } from 'next/router';
 import '@/styles/index.scss';
 import type { AppProps } from 'next/app';
 import { Playfair_Display as PlayfairDisplay, Poppins } from '@next/font/google';
@@ -12,6 +14,24 @@ const playfairDisplay = PlayfairDisplay({
 });
 
 export default function App({ Component, pageProps }: AppProps) {
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    const handleStart = () => setLoading(true);
+    const handleComplete = () => setLoading(false);
+
+    router.events.on('routeChangeStart', handleStart);
+    router.events.on('routeChangeComplete', handleComplete);
+    router.events.on('routeChangeError', handleComplete);
+
+    return () => {
+      router.events.off('routeChangeStart', handleStart);
+      router.events.off('routeChangeComplete', handleComplete);
+      router.events.off('routeChangeError', handleComplete);
+    };
+  }, [router]);
+
   return (
     <>
       <style jsx global>{`
@@ -28,6 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
           font-family: ${poppins.style.fontFamily}, sans-serif;
         }
       `}</style>
+      {loading && <p>Loading...</p>} {/* show Loader component if loading */}
       <Component {...pageProps} />
     </>
   );
