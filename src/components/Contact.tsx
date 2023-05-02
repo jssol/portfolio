@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import {
   Formik, Field, ErrorMessage, Form,
 } from 'formik';
@@ -7,7 +7,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
 import styles from '@/styles/Contact.module.scss';
 import autoVisibilityToggler from '@/utils/autoVisibilityToggler';
-import { NavContext } from './NavContext';
 import BreakpointToggle from './BreakpointToggle';
 import VisibilityToggle from './VisibilityToggle';
 import TextAnimation from './TextAnimation';
@@ -20,8 +19,6 @@ interface Props {
 }
 
 const Contact: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
-  const { isNavOpen } = useContext(NavContext);
-
   useEffect(() => {
     autoVisibilityToggler(isVisible, 'contact');
   }, [isVisible]);
@@ -52,7 +49,7 @@ const Contact: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
   };
 
   return (
-    <section ref={componentRef} id="contact" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="contact" className={styles.container}>
       <TextAnimation type="fade_right" delay={0} className={styles.title_container}>
         <Title index='04' title='Get started' subtitle="Interested in collaborating?" variant={variant} className={styles.title} />
       </TextAnimation>

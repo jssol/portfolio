@@ -126,10 +126,6 @@ $small-height: 14rem;
   border-bottom: 0.5px solid $secondary;
 }
 
-.hidden {
-  opacity: 0;
-}
-
 @media only screen and (min-width: 768px) {
   $small-height: 18rem;
 
