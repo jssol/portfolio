@@ -8,6 +8,7 @@ import About from '@/components/About';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import NavProvider from '@/components/NavContext';
+import CircleAnimation from '@/components/CircleAnimation';
 import styles from '@/styles/Home.module.scss';
 
 const Home = () => {
@@ -77,6 +78,7 @@ const Home = () => {
         <About />
         <Contact />
         <Footer />
+        <CircleAnimation />
       </main>
     </NavProvider>
   );

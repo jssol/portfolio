@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 import styles from '@/styles/About.module.scss';
 import autoVisibilityToggler from '@/utils/autoVisibilityToggler';
 import Link from 'next/link';
 import skills from '@/utils/skills';
-import { NavContext } from './NavContext';
 import BreakpointToggle from './BreakpointToggle';
 import VisibilityToggle from './VisibilityToggle';
 import TextAnimation from './TextAnimation';
@@ -17,14 +16,12 @@ interface Props {
 }
 
 const About: React.FC<Props> = ({ componentRef, isVisible }) => {
-  const { isNavOpen } = useContext(NavContext);
-
   useEffect(() => {
     autoVisibilityToggler(isVisible, 'services');
   }, [isVisible]);
 
   return (
-    <section ref={componentRef} id="services" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="services" className={styles.container}>
       <section className={styles.about}>
         <TextAnimation className={styles.title_container} type="fade_right" delay={0}>
           <Title index='03' title='About me' subtitle="Know more" variant='one' className={styles.title} />

@@ -1,9 +1,8 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import styles from '@/styles/Hero.module.scss';
 import autoVisibilityToggler from '@/utils/autoVisibilityToggler';
 import socialLinks from '@/utils/socialLinks';
-import { NavContext } from './NavContext';
 import BreakpointToggle from './BreakpointToggle';
 import VisibilityToggle from './VisibilityToggle';
 import TextAnimation from './TextAnimation';
@@ -16,14 +15,12 @@ interface Props {
 }
 
 const Hero: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
-  const { isNavOpen } = useContext(NavContext);
-
   useEffect(() => {
     autoVisibilityToggler(isVisible, 'hello');
   }, [isVisible]);
 
   return (
-    <section ref={componentRef} id="hello" className={`${styles.container} ${isNavOpen && styles.hidden}`}>
+    <section ref={componentRef} id="hello" className={styles.container}>
       <TextAnimation type="fade_right" delay={0}>
         <Title index='01' title='Jonathan Sivahera' subtitle="Hello, I'm" variant={variant} />
       </TextAnimation>
