@@ -3,12 +3,10 @@ import styles from '@/styles/Footer.module.scss';
 import { FaHeart } from 'react-icons/fa';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 import socialLinks from '@/utils/socialLinks';
-import { NavContext } from './NavContext';
 import TextAnimation from './TextAnimation';
 
 const Footer: React.FC<{}> = () => {
   const [year, setYear] = useState(0);
-  const { isNavOpen } = useContext(NavContext);
 
   useEffect(() => {
     const date = new Date();

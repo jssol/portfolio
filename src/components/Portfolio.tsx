@@ -1,15 +1,11 @@
-import React, { useContext, useEffect } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { FaChevronRight } from 'react-icons/fa';
-import styles from '@/styles/Portfolio.module.scss';
+import React, { useEffect } from 'react';
 import autoVisibilityToggler from '@/utils/autoVisibilityToggler';
 import projects from '@/utils/projects';
-import formatURL from '@/utils/formatURL';
-import { NavContext } from './NavContext';
+import styles from '@/styles/Portfolio.module.scss';
 import BreakpointToggle from './BreakpointToggle';
 import VisibilityToggle from './VisibilityToggle';
 import TextAnimation from './TextAnimation';
+import ProjectCard from './ProjectCard';
 import Title from './Title';
 
 interface Props {
@@ -19,8 +15,6 @@ interface Props {
 }
 
 const Portfolio: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
-  const { isNavOpen } = useContext(NavContext);
-
   useEffect(() => {
     autoVisibilityToggler(isVisible, 'portfolio');
   }, [isVisible]);
@@ -31,33 +25,8 @@ const Portfolio: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
         <Title index='02' title='Portfolio' subtitle="Overview of my" variant={variant} />
       </TextAnimation>
       <section className={styles.cards}>
-        {projects.map((project, index) => (
-          <article key={project.title} className={`${styles.card} ${styles[project.alias]}`}>
-            <Image
-              src={project.image}
-              alt={project.title}
-              fill
-              className={styles.image}
-              sizes="(max-width: 767px) 100vw, (min-width: 768px) 30vw, (min-width: 768px) 60vw"
-            />
-            <section className={styles.content}>
-              <div>
-                <p className={styles.title}>{project.title}</p>
-                <ul className={styles.stack}>
-                  {project.stack.map((tech) => (
-                    <li key={tech} className={styles.tech}>{tech}</li>
-                  ))}
-                </ul>
-              </div>
-              <TextAnimation className={styles.subtitle} type="fade_left" delay={0}>
-                {project.subtitle}
-              </TextAnimation>
-              <Link className="button" href={`/projects/${formatURL(project.title)}`}>
-                <span className="sr-only">See this project</span>
-                <FaChevronRight />
-              </Link>
-            </section>
-          </article>
+        {projects.map((project) => (
+          <ProjectCard key={project.title} project={project} />
         ))}
       </section>
     </section>

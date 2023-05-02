@@ -1,10 +1,9 @@
-import React, { useContext, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
 import styles from '@/styles/About.module.scss';
 import autoVisibilityToggler from '@/utils/autoVisibilityToggler';
 import Link from 'next/link';
 import skills from '@/utils/skills';
-import { NavContext } from './NavContext';
 import BreakpointToggle from './BreakpointToggle';
 import VisibilityToggle from './VisibilityToggle';
 import TextAnimation from './TextAnimation';
@@ -17,8 +16,6 @@ interface Props {
 }
 
 const About: React.FC<Props> = ({ componentRef, isVisible }) => {
-  const { isNavOpen } = useContext(NavContext);
-
   useEffect(() => {
     autoVisibilityToggler(isVisible, 'services');
   }, [isVisible]);
