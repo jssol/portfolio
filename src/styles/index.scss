@@ -123,11 +123,11 @@ p {
   width: 100%;
   color: $primary;
   z-index: 10;
-  background-image: url('../assets/background.svg');
 
   &.nav_open {
     height: 100vh;
     overflow: hidden;
+    background-image: url('../assets/background.svg');
   }
 }
 
