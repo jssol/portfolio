@@ -22,7 +22,18 @@ const CircleAnimation: React.FC<any> = () => {
   });
 
   return (
-    <animated.div className="with-background" style={{ position: 'fixed', top: 0, right: 0, width: 100, height: 100, borderRadius: '50%', ...style }} />
+    <animated.div
+      className="with-background"
+      style={{
+        position: 'fixed',
+        top: 0,
+        right: 0,
+        width: 100,
+        height: 100,
+        borderRadius: '50%',
+        ...style,
+      }}
+    />
   );
 };
 
