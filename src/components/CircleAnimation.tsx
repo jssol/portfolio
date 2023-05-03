@@ -5,7 +5,7 @@ import { NavContext } from './NavContext';
 const CircleAnimation: React.FC<any> = () => {
   const { isNavOpen } = useContext(NavContext);
 
-  const expandDuration = 3000;
+  const expandDuration = 4500;
   const shrinkDuration = 250;
 
   const style = useSpring({
