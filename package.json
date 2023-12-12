@@ -12,7 +12,6 @@
   "dependencies": {
     "@builder.io/partytown": "^0.7.5",
     "@next/eslint-plugin-next": "^13.2.3",
-    "@next/font": "^13.1.6",
     "@react-spring/web": "^9.7.1",
     "@types/node": "18.14.1",
     "@types/react": "^18.2.43",

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight, FaGithub } from 'react-icons/fa';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
-import { Poppins } from '@next/font/google';
+import { Poppins } from "next/font/google";
 import TextAnimation from '@/components/TextAnimation';
 import styles from '@/styles/Project.module.scss';
 import projects from '@/utils/projects';
