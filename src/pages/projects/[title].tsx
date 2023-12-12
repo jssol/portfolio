@@ -1,6 +1,6 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight, FaGithub } from 'react-icons/fa';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
