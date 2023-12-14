@@ -1,10 +1,10 @@
 import React from 'react';
 import Head from 'next/head';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaChevronLeft, FaChevronRight, FaGithub } from 'react-icons/fa';
 import { BsArrowUpRightCircleFill } from 'react-icons/bs';
-import { Poppins } from "next/font/google";
+import { Poppins } from 'next/font/google';
 import TextAnimation from '@/components/TextAnimation';
 import styles from '@/styles/Project.module.scss';
 import projects from '@/utils/projects';

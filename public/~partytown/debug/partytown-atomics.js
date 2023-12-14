@@ -196,13 +196,13 @@
                 task = accessReq.$tasks$[i];
                 winId = task.$winId$;
                 applyPath = task.$applyPath$;
-                !winCtxs[winId] && winId.startsWith("f_") && (await new Promise((resolve => {
+                !winCtxs[winId] && winId.startsWith("f_") && await new Promise((resolve => {
                     let check = 0;
                     let callback = () => {
                         winCtxs[winId] || check++ > 1e3 ? resolve() : requestAnimationFrame(callback);
                     };
                     callback();
-                })));
+                }));
                 if (1 === applyPath[0] && applyPath[1] in winCtxs[winId].$window$) {
                     setInstanceId(new winCtxs[winId].$window$[applyPath[1]](...deserializeFromWorker(worker, applyPath[2])), task.$instanceId$);
                 } else {

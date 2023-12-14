@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
 import formatURL from '@/utils/formatURL';

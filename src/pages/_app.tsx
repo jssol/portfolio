@@ -1,6 +1,6 @@
 import '@/styles/index.scss';
 import type { AppProps } from 'next/app';
-import { Playfair_Display as PlayfairDisplay, Poppins } from "next/font/google";
+import { Playfair_Display as PlayfairDisplay, Poppins } from 'next/font/google';
 
 const poppins = Poppins({
   subsets: ['latin'],
