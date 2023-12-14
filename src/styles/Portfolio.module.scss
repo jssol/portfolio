@@ -27,6 +27,7 @@ $small-height: 14rem;
   display: flex;
   flex-direction: column;
   position: relative;
+  object-fit: cover;
 
   .image {
     object-fit: cover;
