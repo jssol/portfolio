@@ -24,7 +24,7 @@
     "react-intersection-observer": "^9.4.3",
     "react-toastify": "^9.1.1",
     "sass": "^1.58.3",
-    "sharp": "^0.31.3",
+    "sharp": "^0.34.3",
     "typescript": "4.9.5",
     "typescript-eslint": "^0.0.1-alpha.0",
     "yup": "^1.0.2"
@@ -43,9 +43,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
-    "stylelint": "^13.13.1",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-csstree-validator": "^1.9.0",
-    "stylelint-scss": "^3.21.0"
+    "stylelint": "^16.23.1",
+    "stylelint-config-standard": "^39.0.0",
+    "stylelint-csstree-validator": "^3.0.0",
+    "stylelint-scss": "^6.12.1"
   }
 }
