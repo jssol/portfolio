@@ -65,7 +65,7 @@ const Contact: React.FC<Props> = ({ componentRef, variant, isVisible }) => {
       </TextAnimation>
       <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={onSubmit}>
         {({ isSubmitting }) => (
-          <Form className={styles.form} placeholder={undefined}>
+          <Form className={styles.form}>
             <div className={styles.input_container}>
               <label className={styles.label} htmlFor="name">Your name</label>
               <Field type="text" id="name" name="name" className={styles.input} />
