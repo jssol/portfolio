@@ -43,9 +43,8 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "postcss": "^8.4.21",
     "postcss-cli": "^10.1.0",
-    "stylelint": "^15.11.0",
+    "stylelint": "^16.23.1",
     "stylelint-config-standard": "^39.0.0",
-    "stylelint-csstree-validator": "^3.0.0",
     "stylelint-scss": "^6.12.1"
   }
 }
