@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import Link from 'next/link';
 import { FaChevronRight } from 'react-icons/fa';
 import formatURL from '@/utils/formatURL';
@@ -24,7 +24,6 @@ const ProjectCard: React.FC<Props> = ({ project }) => (
     <Image
       src={project.image}
       alt={project.title}
-      fill
       className={styles.image}
       sizes="(max-width: 767px) 100vw, (min-width: 768px) 30vw, (min-width: 768px) 60vw"
     />
